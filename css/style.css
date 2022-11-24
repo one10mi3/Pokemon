@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+* {
+    margin:0;
+    padding:0;
+}
+html {
+    height:100%;
+}
+body {
+    height: 100%;
+    text-align:left;
+    font-size: 1.9rem;
+    font-family: 'DotGothic16', sans-serif;
+    position: relative;
+}
+.fixed-background {
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/bg_pokemon.jpeg);
+
+    width: 100%;
+    position:relative;
+    min-height: 100%;
+}
+
+
+header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    }
+#master_ball {
+    width: 100px;
+}
+.logo img {
+    width: 200px;
+}
+
+
+main {
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+}
+ul {
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    text-align: center;
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+    background: #5bc8ac;
+    color:#fff;
+}
+.hidden {
+    display: none;
+}
+#phase01 {
+    position: relative;
+    top: 10px;
+}
+#phase03 {
+    position: relative;
+    top: 120px;
+}
+#enemy_status {
+    display: flex;
+    justify-content: space-between;
+}
+.top {
+    display: flex;
+}
+.top p {
+    margin-right: 20px;
+}
+.top p#m_no,
+.top p#m_at {
+    margin-right: 0;
+}
+.under {
+    display: flex;
+}
+.under #e_hp,
+.under #m_hp {
+    width: 96px;
+}
+#status {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+progress {
+    margin: 9px;
+    -webkit-appearance: none;
+    border: none;
+}
+::-webkit-progress-bar {
+    background-color: lightgray;
+}
+::-webkit-progress-value {
+    background-color: lime;
+}
+#e_img {
+    width: 19vw;
+}
+#m_img {
+    width: 19vw;
+    transform: scale(-1, 1);
+}
+#next_at, #next_df {
+    background-color: transparent;
+    border: none;
+    
+}
+.next {
+    width: 150px;
+}
+#phase04 {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.right, .left {
+    margin: auto 0;
+}
+.right img {
+    width: 48px;
+}
+
+
+footer {
+    width:100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+    padding-top: 20px;
+}
+footer li {
+    color: black;
+}
+footer .box {
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+
+
+.fadeLeft{
+    animation-name:fadeLeftAnime;
+    animation-duration:4.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+@keyframes fadeLeftAnime{
+    from {
+    opacity: 0;
+    transform: translateX(-100px);
+    }
+
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+.fadeRight{
+    animation-name:fadeRightAnime;
+    animation-duration:4.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+@keyframes fadeRightAnime{
+    from {
+    opacity: 0;
+    transform: translateX(100px);
+    }
+
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+.fadedown01 {
+    animation-name: fadedown;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; /* 完了時の状態で停止する */
+}
+@keyframes fadedown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+.fadedown02 {
+    animation-name: fadedown02;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadedown02 {
+    0% {
+        opacity: 1;
+        transform: scale(-1, 1) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(-1, 1) translateY(30px);
+    }
+}
+
+
+
+
+.yureru-j {
+    animation: yureru-j 2s infinite;
+}
+@keyframes yureru-j {
+    0% {
+        transform: translate(0px, 2px);
+    }
+    5% {
+        transform: translate(0px, -2px);
+    }
+    10% {
+        transform: translate(0px, 2px);
+    }
+    15% {
+        transform: translate(0px, -2px);
+    }
+    20% {
+        transform: translate(0px, 2px);
+    }
+    25% {
+        transform: translate(0px, -2px);
+    }
+    30% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.yureru-s {
+    animation: yureru-s 2s infinite;
+}
+@keyframes yureru-s {
+    0% {
+        transform: translate(2px, 0px);
+    }
+    5% {
+        transform: translate(-2px, 0px);
+    }
+    10% {
+        transform: translate(2px, 0px);
+    }
+    15% {
+        transform: translate(-2px, 0px);
+    }
+    20% {
+        transform: translate(2px, 0px);
+    }
+    25% {
+        transform: translate(-2px, 0px);
+    }
+    30% {
+        transform: translate(0px, 0px);
+    }
+}

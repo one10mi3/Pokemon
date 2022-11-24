@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+<title>pokemon</title>
+</head>
+<body>
+
+
+<div class="fixed-background">
+  <header>
+    <div class="audio_wrap1 play">
+      <div class="audio_button1"><img id="master_ball" src="./img/master.png" alt=""></div>
+      <audio id="audio" src="battle.mp3" autoplay>
+        <!-- autoplay -->
+        あなたのブラウザーは <code>audio</code> 要素をサポートしていません。
+      </audio>
+    </div>
+    <div class="logo">
+      <a href=""><img src="./img/logo.png" alt=""></a>
+    </div>
+  </header>
+  
+  <main>
+    <!-- 敵ポケモン -->
+    <div id="phase01">
+      <div id="enemy_status" class="fadeLeft"></div>
+    </div>
+
+    <!-- 選ばれたポケモン -->
+    <div id="phase03">
+      <div id="status"></div>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="box">
+      <div id="dialogue01">あっ!野生の<span id="enemy"></span>がとびだしてきた!</div>
+      <!-- ポケモン選ぶ -->
+      <div id="phase02">
+        <p id="dialogue02">戦わせるポケモンを選んでください</p>
+        <ul id="buttle_pokemon">
+          <li id="0">ヒトカゲ</li>
+          <li id="1">ゼニガメ</li>
+          <li id="2">フシギダネ</li>
+          <li id="3">ピカチュウ</li>
+        </ul>
+      </div>
+      <!-- どっちの攻撃か -->
+      <div id="phase04">
+        <div class="left">
+          <div id="dialogue03"></div>
+          <p id="dialogue04"></p>
+          <ul id="attacker" class="hidden">
+            <li id="attack">たたかう</li>
+            <li id="defend">ポケモン</li>
+            <li id="items">どうぐ</li>
+            <li id="away">にげる</li>
+          </ul>
+          <p id="dialogue05"></p>
+        </div>
+        <div class="right">
+          <button id="next_at" class="hidden yureru-s"><img class="next" src="./img/arrow.png" alt=""></button>
+          <button id="next_df" class="hidden yureru-s"><img class="next" src="./img/arrow.png" alt=""></button>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+</div><!-- //fixed-background -->
+
+
+
+<script src="js/pokemon.js"></script>
+</body>
+</html>
